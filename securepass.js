@@ -9,11 +9,6 @@ function lengthCheck(password){
   }
 
 }
-
-
-
-
-
 //returns true or false if there is an uppercase character in the password
 function upperCaseCheck(password){
 
@@ -26,12 +21,6 @@ function upperCaseCheck(password){
   }
   return false;
 }
-
-
-
-
-
-
 //returns true or false if there is an lowercase character in the password
 function lowerCaseCheck(password){
 
@@ -45,14 +34,6 @@ function lowerCaseCheck(password){
   return false;
 
 }
-
-
-
-
-
-
-
-
 //returns true or false if there is a numerical character
 function numberCheck(password){
 
@@ -66,13 +47,6 @@ function numberCheck(password){
   return false;
 
 }
-
-
-
-
-
-
-
 //returns true or false if there is a special character in the password
 function specialCheck(check){
 
@@ -86,19 +60,8 @@ function specialCheck(check){
   return false;
 
 }
-
-
-
-
-
-
-
-
-
-
 function passedAllChecks(){
-  
-
+if(lengthCheck() && upperCaseCheck())
 }
 
 
