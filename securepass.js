@@ -1,3 +1,4 @@
+
 //returns true or false if the length is at least 8 character long
 function lengthCheck(password){
 
@@ -60,20 +61,29 @@ function specialCheck(check){
   return false;
 
 }
-function passedAllChecks(){
-if(lengthCheck() && upperCaseCheck())
+function passedAllChecks(password){
+return(lengthCheck(password) && upperCaseCheck(password) && numberCheck(password) && specialCheck(password) && lowerCaseCheck(password))
 }
-
-
-
-
-
-
-
-
-
 //returns a string which represents the grade for your password
 function grade(password){
 
+  if (lengthCheck(password) === true){
+    return "very bad";
+  }
+  else if ((upperCaseCheck(password) && lowerCaseCheck(password)) === false){
+    return "bad";
+  }
+  else if (numberCheck(password) === true){
+    return "okay";
+  }
+  else if (specialCheck(password) === true){
+    return "good";
+  }
+  else if (passedAllChecks(password) === true){
+    if(password.length >= 20){
+      return "Super";
+    }
+    return "great";
+  }
 
 }
